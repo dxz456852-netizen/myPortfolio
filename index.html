@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OOO | Web Portfolio</title>
   <link rel="stylesheet" href="./styles.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -322,13 +323,13 @@
         <div class="card">
           <h3>간단 메시지</h3>
           <form id="contactForm" class="form">
-            <input name="name" placeholder="이름" required />
-            <input name="email" placeholder="이메일" type="email" required />
+            <input name="from_name" placeholder="이름" required />
+            <!-- <input name="email" placeholder="이메일" type="email" required /> -->
             <textarea name="message" placeholder="메시지" rows="5" required></textarea>
-            <button class="btn primary" type="submit">메시지 미리보기</button>
-            <p class="muted small" id="formHint">
+            <button class="btn primary" type="button" onclick="sendMail()">메시지 전달하기</button>
+            <!-- <p class="muted small" id="formHint">
               * 실제 전송은 아니고, 입력 내용을 화면에 미리보기로 보여줍니다.
-            </p>
+            </p> -->
           </form>
         </div>
       </div>
